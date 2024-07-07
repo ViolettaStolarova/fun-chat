@@ -1,0 +1,105 @@
+.header-content {
+  display: grid;
+  grid-template-columns: 0.4fr 0.5fr 0.6fr 0.6fr;
+  grid-template-rows: auto;
+  align-items: center;
+
+  padding: 15px;
+
+  border-radius: 12px 12px 0 0;
+}
+
+.current-user {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.user-icon {
+  width: 35px;
+}
+
+.user-icon svg path {
+  fill: #00ffccbf;
+}
+
+.current-userName {
+  width: 100%;
+  height: 100%;
+
+  margin-right: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.app-name {
+  justify-self: center;
+
+  margin: 0 5px;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.chat-about-icon {
+  width: 35px;
+}
+
+.chat-about-icon svg {
+  fill: #ffffff9f;
+
+  transition: fill 0.4s;
+  cursor: pointer;
+}
+
+.chat-about-icon svg:hover {
+  fill: #ffffff;
+}
+
+.logout-btn {
+  justify-self: flex-end;
+
+  padding: 7px 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 950px) {
+  .header-content {
+    grid-template-columns: 0.6fr 0.5fr 0.6fr 0.5fr;
+  }
+
+  .app-name {
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-icon {
+    display: none;
+  }
+
+  .chat-about-icon {
+    width: 25px;
+  }
+
+  .current-userName {
+    font-size: 12px;
+  }
+
+  .app-name {
+    margin-right: 20px;
+
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .logout-btn {
+    padding: 6px 9px;
+
+    font-size: 12px;
+  }
+}

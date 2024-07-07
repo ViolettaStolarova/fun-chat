@@ -1,0 +1,81 @@
+.about-box {
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 20px;
+}
+
+.about-box-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 30px;
+
+  color: #ffffff;
+  background-color: #1b1d2163;
+  border-radius: 15px;
+  box-shadow: 1px 1px 24px #00ffccb4;
+}
+
+.about-box-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.about-box-text {
+  margin: 0;
+
+  font-weight: 300;
+  text-align: center;
+  word-wrap: break-word;
+  text-shadow: 1px 1px 2px #00ffccb4;
+}
+
+.github-link {
+  margin-top: 15px;
+}
+
+.github-link svg {
+  width: 50px;
+
+  fill: #ffffffbc;
+
+  transition: fill 0.4s;
+}
+
+.github-link svg:hover {
+  fill: #ffffff;
+}
+
+.return-btn {
+  margin-top: 10px;
+  padding: 7px 12px;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .about-box-title {
+    font-size: 20px;
+  }
+
+  .about-box-text {
+    font-size: 14px;
+  }
+
+  .github-link svg {
+    width: 40px;
+  }
+
+  .return-btn {
+    font-size: 18px;
+  }
+}

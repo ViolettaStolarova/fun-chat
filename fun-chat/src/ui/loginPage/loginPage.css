@@ -1,0 +1,145 @@
+.login-form-container {
+  height: calc(100dvh - 45px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 45px;
+  padding: 0 40px;
+}
+
+.login-form {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 50px 40px;
+
+  color: #ffffff;
+  background-color: #1b1d2163;
+  box-shadow: 1px 1px 24px #00ffccb4;
+  border-radius: 15px;
+}
+
+.login-form .user-icon {
+  position: absolute;
+  top: -150px;
+
+  width: 130px;
+}
+
+.login-form .user-icon svg path {
+  fill: #00ffccc8;
+}
+
+.login-form .about-icon {
+  width: 35px;
+
+  position: absolute;
+  right: 15px;
+  top: 15px;
+
+  fill: #ffffffbc;
+
+  cursor: pointer;
+
+  transition: fill 0.4s;
+}
+
+.login-form .about-icon:hover {
+  fill: #ffffff;
+}
+
+.label-userLogin,
+.label-userPassword {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  font-size: 20px;
+}
+
+.input-userLogin,
+.input-userPassword {
+  padding: 7px;
+
+  min-width: 200px;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 18px;
+
+  outline: none;
+}
+
+.error-message-userLogin,
+.error-message-userPassword {
+  min-height: 14px;
+
+  margin: 0;
+
+  color: #e96969;
+
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.login-btn {
+  padding: 7px 12px;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media (max-height: 580px) {
+  .login-form-container {
+    height: 100dvh;
+    margin: 0;
+  }
+
+  .login-form .user-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    gap: 20px;
+  }
+
+  .login-form .user-icon {
+    width: 100px;
+
+    top: -120px;
+  }
+
+  .login-form .about-icon {
+    width: 25px;
+  }
+
+  .label-userLogin,
+  .label-userPassword {
+    font-size: 16px;
+  }
+
+  .input-userLogin,
+  .input-userPassword {
+    font-size: 14px;
+  }
+
+  .error-message-userLogin,
+  .error-message-userPassword {
+    font-size: 11px;
+  }
+
+  .login-btn {
+    font-size: 18px;
+  }
+}
