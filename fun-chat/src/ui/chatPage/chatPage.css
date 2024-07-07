@@ -1,0 +1,30 @@
+#chat {
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+.chat-box {
+  width: 80dvw;
+
+  border-radius: 12px;
+  box-shadow: 1px 1px 15px #00ffccb4;
+}
+
+.header-content,
+.footer-content {
+  backdrop-filter: blur(16px) saturate(102%);
+  -webkit-backdrop-filter: blur(16px) saturate(102%);
+  background-color: #11192826;
+}
+
+@media (max-width: 768px) {
+  .chat-box {
+    width: 90dvw;
+  }
+}

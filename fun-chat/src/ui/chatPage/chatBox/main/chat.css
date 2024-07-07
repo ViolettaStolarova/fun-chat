@@ -1,0 +1,336 @@
+.main-content {
+  width: 100%;
+  height: 65dvh;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  backdrop-filter: blur(16px) saturate(102%);
+  -webkit-backdrop-filter: blur(16px) saturate(102%);
+  background-color: #1119281c;
+}
+
+.users-sidebar {
+  height: 100%;
+  width: 25%;
+
+  background-color: #11192826;
+}
+
+.input-search {
+  height: 22px;
+  width: 100%;
+}
+
+.users-container {
+  height: calc(65dvh - 32px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  margin-top: 10px;
+
+  overflow-y: auto;
+}
+
+.users-container::-webkit-scrollbar,
+.dialogue-box::-webkit-scrollbar {
+  width: 7px;
+}
+
+.users-container::-webkit-scrollbar-track,
+.dialogue-box::-webkit-scrollbar-track {
+  background: #151b273a;
+}
+
+.users-container::-webkit-scrollbar-thumb,
+.dialogue-box::-webkit-scrollbar-thumb {
+  background-color: #00ffcc6d;
+  border-radius: 20px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 5px;
+
+  padding: 10px;
+
+  background-color: #151b273a;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.user-item:hover {
+  background-color: #151b2724;
+}
+
+.user-item-name,
+.notification,
+.message-from,
+.message-dateTime,
+.message-text,
+.message-edited-status,
+.message-delivered-status,
+.delete-btn,
+.edit-btn {
+  margin: 0;
+
+  font-size: 12.5px;
+}
+
+.user-item-status {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+}
+
+.user-item-status.true {
+  background-color: #00ffccc8;
+}
+
+.user-item-status.false {
+  background-color: #d52004c8;
+}
+
+.notification {
+  width: 20px;
+}
+
+.chat {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dialogue-box-header {
+  height: 10%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 0 10%;
+
+  background-color: #11192826;
+}
+
+.dialogue-box {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 10px 20px;
+
+  overflow-y: auto;
+}
+
+.dialogue-box-notification {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: #0d3b32c8;
+  text-align: center;
+}
+
+.send-form {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.input-send {
+  width: 65%;
+  height: 25px;
+
+  border-radius: 5px;
+}
+
+.send-btn {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+}
+
+.send-btn svg {
+  margin-left: 3px;
+}
+
+.message {
+  width: 70%;
+  max-width: 410px;
+
+  display: grid;
+  grid-template-areas:
+    'from actions actions dateTime'
+    'message message message message'
+    'edit . . status';
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  gap: 5px;
+
+  margin-bottom: 10px;
+  padding: 7px 12px 12px 12px;
+
+  background-color: #151b273a;
+}
+
+.message.current-user {
+  margin-left: auto;
+  width: 100%;
+
+  border-radius: 7px 7px 0 7px;
+}
+
+.message.user {
+  margin-left: 0;
+  width: 100%;
+
+  border-radius: 7px 7px 7px 0;
+}
+
+.message-from {
+  grid-area: from;
+}
+
+.message-dateTime {
+  grid-area: dateTime;
+
+  text-align: end;
+}
+
+.message-text {
+  position: relative;
+
+  grid-area: message;
+  display: block;
+
+  position: relative;
+
+  width: 100%;
+
+  padding: 6px;
+
+  background-color: #151b2755;
+  border-radius: 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+
+.message-edited-status {
+  grid-area: edit;
+}
+
+.message-delivered-status {
+  grid-area: status;
+
+  color: #00ffccc8;
+  text-align: end;
+}
+
+.new-messages-line {
+  width: 100%;
+
+  margin: 7px 0;
+  padding-bottom: 3px;
+
+  color: #0d11177b;
+  text-align: center;
+
+  border-bottom: 2px solid #151b2755;
+}
+
+.delete-btn {
+  padding: 5px;
+
+  background-color: #151b2755;
+}
+
+.delete-btn:hover {
+  background-color: #151b2729;
+}
+
+@media (max-width: 950px) {
+  .users-sidebar {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dialogue-box-header {
+    height: 8%;
+  }
+
+  .input-search,
+  .dialogue-box-notification {
+    font-size: 12px;
+  }
+
+  .users-container::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .user-item {
+    padding: 5px;
+  }
+
+  .user-item-name,
+  .notification {
+    font-size: 11px;
+  }
+
+  .user-item-status {
+    width: 7px;
+    height: 7px;
+  }
+
+  .user-name,
+  .user-status,
+  .new-messages-line {
+    font-size: 13px;
+  }
+
+  .input-send {
+    font-size: 12px;
+  }
+
+  .send-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .message-from,
+  .message-text,
+  .message-edited-status,
+  .message-delivered-status,
+  .delete-btn {
+    font-size: 9px;
+  }
+
+  .message-dateTime {
+    font-size: 7px;
+  }
+}

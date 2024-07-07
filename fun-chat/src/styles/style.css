@@ -1,0 +1,52 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Sora', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: #ffffff;
+  background: radial-gradient(circle, #2ba17f 0%, #303150 100%);
+}
+
+button {
+  border: none;
+  border-radius: 7px;
+  background-color: #00ffccc8;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+button:hover,
+button:focus {
+  background-color: #19d7b1c8;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  color: #00000054;
+  background-color: #1b443cc8;
+  box-shadow: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}

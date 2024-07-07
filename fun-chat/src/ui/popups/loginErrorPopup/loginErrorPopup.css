@@ -1,0 +1,62 @@
+.login-error-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+
+  width: 100%;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  background-color: rgba(0, 0, 0, 0.371);
+}
+
+.login-error-popup {
+  position: relative;
+
+  width: 60%;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 20px;
+
+  background-color: #03c19b;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-error-message {
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+}
+
+.close-btn svg {
+  width: 18px;
+
+  fill: #13271ec7;
+
+  transition: fill 0.4s;
+}
+
+.close-btn svg:hover {
+  fill: #1f4b37c7;
+}
+
+@media (max-width: 600px) {
+  .login-error-message {
+    font-size: 13px;
+  }
+
+  .close-btn svg {
+    width: 15px;
+  }
+}
